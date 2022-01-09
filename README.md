@@ -258,3 +258,49 @@ index d931c57..6ff8041 100644
 
 `git remote set-url origin https://[token]@github.com/名字/仓库名.git`
 
+`git push -u origin master `
+
+
+
+1.查看远程仓库列表 `git remote -v`
+
+```c++
+bakkdoor  https://github.com/bakkdoor/grit (fetch)
+bakkdoor  https://github.com/bakkdoor/grit (push)
+cho45     https://github.com/cho45/grit (fetch)
+cho45     https://github.com/cho45/grit (push)
+defunkt   https://github.com/defunkt/grit (fetch)
+defunkt   https://github.com/defunkt/grit (push)
+koke      git://github.com/koke/grit.git (fetch)
+koke      git://github.com/koke/grit.git (push)
+origin    git@github.com:mojombo/grit.git (fetch)
+origin    git@github.com:mojombo/grit.git (push)
+```
+
+2.添加远程仓库
+
+`git remote add <shortname> <url>`
+
+这些短名字可以代替整个url
+
+## 分支
+
+| 命令                                 | 描述                                                         |
+| ------------------------------------ | ------------------------------------------------------------ |
+| git checkout [branch]                | 切换到指定分支                                               |
+| git checkout -b [new_branch]         | 新建分支并切换到新建分支                                     |
+| git branch -d [branch]               | 删除指定分支                                                 |
+| git branch [new_branch]              | 新建分支                                                     |
+| git merge [branch]                   | 合并分支（要先切会master分支，然后再master分支上来合并分支） |
+| git branch -m  [old_name] [new_name] | 重命名分支                                                   |
+
+### 分支的push和pull
+
+| 命令                                                  | 描述                              |
+| ----------------------------------------------------- | --------------------------------- |
+| git branch -a                                         | 查看本地和远程分支                |
+| git push [origin] [branch]                            | 推送本地分支到远程                |
+| git push [origin] :remote_branch                      | 删除远程分支（保留本地分支）      |
+| git checkout -b [local_branch] [origin/remote_branch] | 拉去 远程指定分支并在本地创建分支 |
+| git fetch <remote>                                    | 从远程仓库同步新的内容            |
+
