@@ -330,3 +330,20 @@ sdafasdfasdfasdf sadf asdf
 
 
 
+`git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中。
+
+而`git pull` 则是将远程主机的最新内容拉下来后直接合并，即：`git pull = git fetch + git merge`，这样可能会产生冲突，需要手动解决。
+
+## 4. 标签管理
+
+| 命令                                    | 描述                   |
+| --------------------------------------- | ---------------------- |
+| git tag <tag_name>                      | 新编标签，默认为HEAD   |
+| git tag -a <tag_name>  -m "xxxx"        | 添加标签并指定标签描述 |
+| git tag                                 | 查看所有标签           |
+| git tag -d <name>                       | 删除name标签           |
+| git push <remote> <tag_name>            | 推送本地标签到仓库     |
+| git push origin --tags                  | 推送全部未推送的标签   |
+| git push <remot> <:/refs/tags/tag_name> | 删除远程库的标签       |
+
+标签相当于一个发行版本用来上传这个版本
