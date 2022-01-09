@@ -304,3 +304,29 @@ origin    git@github.com:mojombo/grit.git (push)
 | git checkout -b [local_branch] [origin/remote_branch] | 拉去 远程指定分支并在本地创建分支 |
 | git fetch <remote>                                    | 从远程仓库同步新的内容            |
 
+### merge冲突
+
+如果两个分支都修改了同一个文件
+
+那么merge之后文件冲突的地方会有
+
+```c++
+Auto-merging 6.txt
+CONFLICT (content): Merge conflict in 6.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+6.txt
+
+```c++
+<<<<<<< HEAD
+dfsadfasdf sadf asdfastw refadfvsc
+=======
+sdafasdfasdfasdf sadf asdf
+>>>>>>> new
+```
+
+根据使劲情况具体分析,修改后重新提交
+
+
+
